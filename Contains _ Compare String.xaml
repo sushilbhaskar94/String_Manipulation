@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Contains___Compare_String" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="620.666666666667,1572.66666666667" sap2010:WorkflowViewState.IdRef="Contains___Compare_String_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Contains___Compare_String" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="620.666666666667,1406" sap2010:WorkflowViewState.IdRef="Contains___Compare_String_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
       <x:String>System.Activities</x:String>
@@ -59,7 +59,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Contains___Compare_String" sap:VirtualizedContainerService.HintSize="602,1508" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Contains___Compare_String" sap:VirtualizedContainerService.HintSize="476,1341.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="SampleDT" />
     </Sequence.Variables>
@@ -68,20 +68,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Input File kept in Sample Excel Files&#xD;&#xA;&#xD;&#xA;Here, Excel File is read from B1 cell onwards" DataTable="[SampleDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,148.666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B1" SheetName="Sheet1" WorkbookPath="Sample Excel Files\Input File.xlsx">
+    <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Input File kept in Sample Excel Files&#xD;&#xA;&#xD;&#xA;Here, Excel File is read from B1 cell onwards " DataTable="[SampleDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,148.666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B1" SheetName="Sheet1" WorkbookPath="Sample Excel Files\Input File.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[SampleDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1227.33333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[SampleDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1060.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1103.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,936.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CompanyName" />
               <Variable x:TypeArguments="x:String" Name="Name" />
@@ -92,7 +92,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[CompanyName]</OutArgument>
               </Assign.To>
@@ -100,7 +100,7 @@
                 <InArgument x:TypeArguments="x:String">[CurrentRow("CompanyName").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Name]</OutArgument>
               </Assign.To>
@@ -108,7 +108,7 @@
                 <InArgument x:TypeArguments="x:String">[CurrentRow("Name").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Income]</OutArgument>
               </Assign.To>
@@ -116,7 +116,7 @@
                 <InArgument x:TypeArguments="x:String">[CurrentRow("Income").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <If sap2010:Annotation.AnnotationText="Equals filters only EXACT match in Condition&#xD;&#xA;&#xD;&#xA;Ex. - CurrentRow(&quot;Name&quot;).ToString = &quot;Sushil&quot;" Condition="[Name.Equals(&quot;Sushil&quot;)]" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="If_2">
+            <If sap2010:Annotation.AnnotationText="Equals filters only EXACT match in Condition&#xD;&#xA;&#xD;&#xA;Ex. - CurrentRow(&quot;Name&quot;).ToString = &quot;Sushil&quot;" Condition="[Name.Equals(&quot;Sushil&quot;)]" sap:VirtualizedContainerService.HintSize="262,148" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -144,7 +144,8 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If sap2010:Annotation.AnnotationText="Contains doesnt filter the exact word, It checks if that perticular string is input.&#xD;&#xA;&#xD;&#xA;We wanted to filter on Sushil, but we got ouputs :&#xD;&#xA;&#xD;&#xA;Sushil&#xD;&#xA;SushilKumar&#xD;&#xA;SushilaBai&#xD;&#xA;" Condition="[Name.Contains(&quot;Sushil&quot;)]" sap:VirtualizedContainerService.HintSize="484,517.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="-----------------------------" />
+            <If sap2010:Annotation.AnnotationText="Contains doesnt filter the exact word, It checks if that perticular string is input.&#xD;&#xA;&#xD;&#xA;We wanted to filter on Sushil, but we got ouputs :&#xD;&#xA;&#xD;&#xA;Sushil&#xD;&#xA;SushilKumar&#xD;&#xA;SushilaBai&#xD;&#xA;" Condition="[Name.Contains(&quot;Sushil&quot;)]" sap:VirtualizedContainerService.HintSize="262,248" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
